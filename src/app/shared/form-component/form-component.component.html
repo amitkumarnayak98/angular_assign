@@ -1,0 +1,58 @@
+<form [formGroup]="signUpForm">
+  <div class="form_field-block">
+    <mat-form-field>
+      <mat-label>{{ appMessages.dataGrid.email }}</mat-label>
+      <input
+        formControlName="email"
+        type="email"
+        matInput
+        placeholder="{{ appMessages.dataGrid.email }}"
+      />
+      <mat-error *ngIf="signUpForm.controls['email'].errors">
+        {{ appMessages.signUpForm.emailError }}</mat-error
+      >
+    </mat-form-field>
+  </div>
+  <div class="form_field-block">
+    <mat-form-field>
+      <mat-label>{{ appMessages.dataGrid.username }}</mat-label>
+      <input
+        formControlName="userName"
+        type="text"
+        matInput
+        placeholder="{{ appMessages.dataGrid.username }}"
+      />
+      <mat-error *ngIf="signUpForm.controls['userName'].errors">
+        {{ appMessages.signUpForm.userNameError }}
+      </mat-error>
+    </mat-form-field>
+  </div>
+  <div class="form_field-block">
+    <mat-form-field>
+      <mat-label>{{ appMessages.dataGrid.name }}</mat-label>
+      <input
+        formControlName="name"
+        type="text"
+        matInput
+        placeholder="{{ appMessages.dataGrid.name }}"
+      />
+      <mat-error *ngIf="signUpForm.controls['userName'].errors">
+        {{ appMessages.signUpForm.nameError }}
+      </mat-error>
+    </mat-form-field>
+  </div>
+  <div class="form_field-block">
+    <mat-form-field>
+      <mat-label>{{ appMessages.dataGrid.password }}</mat-label>
+      <input
+        formControlName="password"
+        type="password"
+        matInput
+        placeholder="{{ appMessages.dataGrid.password }}"
+      />
+      <mat-error *ngIf="signUpForm.controls['userName'].errors">
+        {{ appMessages.signUpForm.passwordError }}
+      </mat-error>
+    </mat-form-field>
+  </div>
+</form>

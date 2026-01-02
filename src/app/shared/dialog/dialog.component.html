@@ -1,0 +1,23 @@
+<span>
+  <h1 mat-dialog-title>{{ appMessages.signUpForm.heading }}</h1>
+  <div mat-dialog-content>
+    <app-form-component></app-form-component>
+  </div>
+
+  <div mat-dialog-actions [align]="'end'">
+    <button mat-raised-button color="warn" mat-dialog-close>
+      {{ appMessages.application.close }}
+    </button>
+    <button
+      mat-raised-button
+      color="primary"
+      (click)="
+        actionBtn === appMessages.application.save
+          ? handleSignUpFormData()
+          : openLoginDialog()
+      "
+    >
+      {{ actionBtn }}
+    </button>
+  </div>
+</span>

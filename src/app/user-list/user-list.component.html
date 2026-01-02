@@ -1,0 +1,11 @@
+<div *ngIf="userInfo?.length">
+  <app-data-grid></app-data-grid>
+  <button
+    mat-raised-button
+    color="primary"
+    class="open-btn"
+    (click)="getEmployeeForm()"
+  >
+    {{ appMessages.application.proceedEmployeeForm }}
+  </button>
+</div>
